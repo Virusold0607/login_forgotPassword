@@ -29,12 +29,15 @@ class Register{
         $result = mysqli_query($this->connection,$INSERT_QUERY);
         
         if($result){
-           echo "INSERTED!";
+           echo "Data Saved!\n";
+           echo "\nSave this UID for reseting your password in case you forget <b>$this->UID<b>";
+        
         }
         else if(!$result){
             echo "Username Already exist!";
+            
         }
-        
+
         
     }
 }
@@ -48,6 +51,18 @@ if(!empty($_POST['username'] && !empty($_POST['password'])) && !empty($_POST['em
     $password = $_POST['password'];
     $email = $_POST['email'];
     $UID = uniqid();
+
+    /*Prevention form MySQL injection*/
+    $username = stripcslashes($username);
+    $password = stripcslashes($password);
+    $email = stripslashes($email);
+    $UID = stripslashes($UID);
+
+    $username = mysqli_real_escape_string($connection,$username);
+    $password = mysqli_real_escape_string($connection,$password);
+    $email = mysqli_real_escape_string($connection,$email);
+    $UID = mysqli_real_escape_string($connection,$UID);
+    /****/
 
     $form = new Register($connection,$username,$password,$email,$UID);
     $form->insert();
