@@ -5,7 +5,12 @@
     border-radius: 30px;
     box-shadow: 0 0 10px 0 black;
 }
-#InputEmail1 , #InputPassword1{
+#InputEmail1{
+    opacity: .8;
+    overflow: hidden;
+}
+
+#InputPassword1{
     opacity: .8;
     overflow: hidden;
 }
