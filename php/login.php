@@ -4,6 +4,7 @@ class Login{
     public $connection;
     public $username;
     public $password;
+
     function __construct($connection,$username,$password){
         $this->connection = $connection;
         $this->username = $username;
@@ -40,7 +41,8 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
     $username = mysqli_escape_string($connection,$username);
     $password = mysqli_escape_string($connection,$password);
     /*****/
+    $login_form = new Login($connection,$username,$password);
+    $login_form->login();
 }
-$login_form = new Login($connection,$username,$password);
-$login_form->login();
+
 ?>
