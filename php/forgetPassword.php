@@ -15,8 +15,9 @@ class ForgetPass{
         $result = mysqli_query($this->connection,$query) or die(mysqli_error());
         
         if(mysqli_num_rows($result) > 0){
-           echo "user exist!";
-            #header();
+           //echo "user exist!";
+            header('Location: ../html/reset.htm');
+            //define('myheader',true);
         }
         else{
             echo "User does not exist!";

@@ -44,5 +44,5 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
     $login_form = new Login($connection,$username,$password);
     $login_form->login();
 }
-
+define('included',true);
 ?>
