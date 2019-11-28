@@ -1,5 +1,5 @@
 <?php
-
+define('root_',TRUE);
 class Login{
     public $connection;
     public $username;

@@ -30,7 +30,7 @@ class Register{
         
         if($result){
            echo "Data Saved!\n";
-           echo "\nSave this UID for reseting your password in case you forget <b>$this->UID<b>";
+           echo "</br>Save this UID for reseting your password in case you forget <b>$this->UID<b>";
         
         }
         else if(!$result){

@@ -16,8 +16,10 @@ class ForgetPass{
         
         if(mysqli_num_rows($result) > 0){
            //echo "user exist!";
-            header('Location: ../html/reset.htm');
+            //header('Location: reset.php');
+            include('reset.php');
             //define('myheader',true);
+            
         }
         else{
             echo "User does not exist!";
@@ -36,7 +38,10 @@ if(!empty($_POST['UID'])){
     $UID = stripslashes($UID);
     $UID = mysqli_escape_string($connection,$UID);
     $forget_pass = new ForgetPass($connection,$UID);
-    $forget_pass->uid_exists();    
+    $forget_pass->uid_exists();  
+     
 }
+
+//define('root_',TRUE); 
 
 ?>
