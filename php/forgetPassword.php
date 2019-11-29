@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class ForgetPass{
     public $connection;
@@ -33,7 +34,7 @@ $connection = mysqli_connect("localhost",'root','','users') or die(mysqli_error(
 
 if(!empty($_POST['UID'])){
     $UID = $_POST['UID'];
-
+    $_SESSION['var'] = $UID;
     /*MySQL injection security*/
     $UID = stripslashes($UID);
     $UID = mysqli_escape_string($connection,$UID);

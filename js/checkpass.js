@@ -4,5 +4,8 @@ function check() {
         document.getElementById('message').innerHTML = "match";
     } else {
         alert("Password Does Not Match");
+        return false;
+        //cleartext();
     }
 }
+
