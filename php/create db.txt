@@ -1,0 +1,19 @@
+MySQL Queries for creating db for this project that it supports
+
+
+
+######################
+'CREATE DATABASE users'
+
+CREATE TABLE `user` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `username` varchar(32) NOT NULL,
+ `password` varchar(255) NOT NULL,
+ `email` varchar(25) NOT NULL,
+ `UID` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `username` (`username`)
+) 
+ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4
+
+#####################
