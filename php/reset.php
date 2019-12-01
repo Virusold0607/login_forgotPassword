@@ -11,7 +11,15 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__))
     <title>Enter New Password</title>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--CSS-->
+            <meta name="title" content="login">
+            <meta name="description" content="this is  a login page">
+            <meta name="keywords" content="sajid,shaikh,sajidshaikh,login">
+            <meta name="robots" content="index, follow">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="language" content="English">
+            <meta name="revisit-after" content="2 days">
+            <meta name="author" content="sajid shaikh">
+            <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--JS-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
