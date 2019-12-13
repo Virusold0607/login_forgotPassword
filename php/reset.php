@@ -42,10 +42,10 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__))
                               </div>
                              <div class="form-group">
                                     <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="password" name="password1" class="form-control" id="InputPassword1"  placeholder="Enter Password Again" minlength = "8" required>
+                            <input type="password" name="password1" onchange = "check()" class="form-control" id="InputPassword1"  placeholder="Enter Password Again" minlength = "8" required>
                               </div>
                              
-                                  <button type="submit" name="submit" class="btn btn-primary btn-block" onclick = "check()">Reset</button>
+                                  <button type="submit" name="submit" class="btn btn-primary btn-block" >Reset</button>
                                   
                             </form>
                     </section>

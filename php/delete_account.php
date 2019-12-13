@@ -1,39 +1,44 @@
 <?php
+$connection = mysqli_connect("localhost","root","","users") or die();
 
 class Delete_account{
     public $connection;
-    public $username;
-    public $password;
+    public $uid;
     
-    function __construct($connection,$username,$password){
+    function __construct($connection,$uid){
         $this->connection = $connection;
-        $this->username = $username;
-        $this->password = $password;
+        $this->uid = $uid;
+        
     }
 
     function delete_account(){
-        $query = "DELETE FROM user WHERE username = '".$this->username."' AND password = '".$this->password."' ";
-        $query_1 = "SELECT username, password FROM user WHERE username = '".$this->username."' AND  password = '".$this->password."'";
-        if(mysqli_query($this->connection,$query)){
+
+        $check_stmt = "SELECT * FROM user WHERE UID = '$this->uid' ";
+        $res = mysqli_query($this->connection,$check_stmt) or die(mysqli_error($this->connection));
+        $row = mysqli_fetch_assoc($res);
+        if($row > 0){
+
+            $stmt = $this->connection->prepare("DELETE FROM user WHERE UID = ?");
+            $stmt->bind_param("s",$this->uid);
+            $stmt->execute();
             echo "Deleted!";
+            
         }
         else{
-            echo "Failed or account does not exist!";
+            echo "Account Does not exist!";
+        }
+
         }
         
-    }
 }
-$connection = mysqli_connect("localhost","root","","users") or die(mysqli_error());
 
 
-if(!empty($_POST['username']) && !empty($_POST['password'])){
-    
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    
-
-
-    $dc = new Delete_account($connection,$username,$password);
+if(!empty($_POST['uid']))
+{
+    $uid = $_POST['uid'];
+    $uid = stripslashes($uid);
+    $uid = mysqli_escape_string($connection,$uid);
+    $dc = new Delete_account($connection,$uid);
     
     $dc->delete_account();
 
