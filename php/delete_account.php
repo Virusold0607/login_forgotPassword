@@ -37,11 +37,7 @@ if(!empty($_POST['uid']))
 {
     $uid = $_POST['uid'];
     $uid = stripslashes($uid);
-<<<<<<< HEAD
     $uid = mysqli_escape_string($connection,$uid);
-=======
-    $uid = mysqli_escape_string($uid);
->>>>>>> cddb2fce149d567cccd634b2e3316726866f7202
     $dc = new Delete_account($connection,$uid);
     
     $dc->delete_account();
