@@ -31,6 +31,7 @@ $username = '';
 $password = '';
 
 if(!empty($_POST['username']) && !empty($_POST['password'])){
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
     
@@ -40,7 +41,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
 
     $username = mysqli_escape_string($connection,$username);
     $password = mysqli_escape_string($connection,$password);
-    /*****/
+    /**instantiation**/
     $login_form = new Login($connection,$username,$password);
     $login_form->login();
 }
