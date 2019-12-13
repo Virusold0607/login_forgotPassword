@@ -33,14 +33,11 @@ class Delete_account{
 }
 
 
-
-
-
-
-
 if(!empty($_POST['uid']))
 {
     $uid = $_POST['uid'];
+    $uid = stripslashes($uid);
+    $uid = mysqli_escape_string($uid);
     $dc = new Delete_account($connection,$uid);
     
     $dc->delete_account();
