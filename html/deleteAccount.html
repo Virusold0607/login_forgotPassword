@@ -28,17 +28,15 @@
         <section class="container-fluid bg" id = "body-form">
                 <section class="row justify-content-center">
                     <section class="col-12 col-sm-6 col-md-3">
-                        <form class="form-container" method="POST" action="../php/delete_account.php">
+                        <form class="form-container" method="POST" action = "../php/delete_account.php">
                               <div class="form-group">
-                                <!-- <label for="username">Username</label> -->
                                 <input type="text" name="uid" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter UID" required>
                             <small id="emailHelp" class="form-text text-muted">We're sad to see you going! :(</small>
                               </div>
                              
                              
-                                  <button type="submit" name="submit" class="btn btn-primary btn-block">Delete</button>
-                            <!-- <small><a href="html/register.html" class="links" target="_blank">Doesn't have an account ?</a></small><br> -->
-                            <!-- <small><a href="html/forgetPassword.html" target="_blank" class="links">Forget password</a></small> -->
+                                  <button  onclick="return confirm('Are you sure ?');" type="submit" name="submit" class="btn btn-primary btn-block">Delete</button>
+                            
                             </form>
                     </section>
                 </section>

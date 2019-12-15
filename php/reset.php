@@ -13,7 +13,7 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__))
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="title" content="login">
             <meta name="description" content="this is  a login page">
-            <meta name="keywords" content="sajid,shaikh,sajidshaikh,login">
+            <meta name="keywords" content="sajid,shaikh,sajidshaikh,reset">
             <meta name="robots" content="index, follow">
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <meta name="language" content="English">
@@ -41,7 +41,7 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__))
 
                               </div>
                              <div class="form-group">
-                                    <!-- <label for="exampleInputPassword1">Password</label> -->
+                                    
                             <input type="password" name="password1" onchange = "check()" class="form-control" id="InputPassword1"  placeholder="Enter Password Again" minlength = "8" required>
                               </div>
                              

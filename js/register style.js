@@ -1,3 +1,4 @@
+
 function backgroundChange(){
     var image_container = ['background-image.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg','bg7.jpg','bg8.jpg'];
     
@@ -13,3 +14,7 @@ function backgroundChange(){
     
 }
 backgroundChange();
+
+function instruction(){
+    return alert("Enter UID that was given while registering");
+}
