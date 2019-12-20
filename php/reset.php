@@ -19,6 +19,7 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__))
             <meta name="language" content="English">
             <meta name="revisit-after" content="2 days">
             <meta name="author" content="sajid shaikh">
+             <!--Icon-->       <link rel="icon" href="../images/icon.png" type="image/icon">
             <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--JS-->
