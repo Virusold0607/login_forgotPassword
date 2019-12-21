@@ -3,6 +3,7 @@ login system using PHP and MySQL Database
 
 1)Login
 
+
 ![](screenshot/login.PNG)
 
 2)Register
@@ -16,3 +17,9 @@ login system using PHP and MySQL Database
 4)Reset 
 
 ![](screenshot/reset.PNG)
+
+
+5)Delete Account using UID
+
+
+![](screenshot/delete.PNG)
