@@ -22,4 +22,4 @@ login system using PHP and MySQL Database
 5)Delete Account using UID
 
 
-![](screenshot/delete.PNG)
+![](screenshot/delete.png)
