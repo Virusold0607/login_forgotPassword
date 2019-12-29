@@ -15,6 +15,3 @@ function backgroundChange(){
 }
 backgroundChange();
 
-window.onload = function(){
-    alert("Enter UID that was given during registration");
-}
