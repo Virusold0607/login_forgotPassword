@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class Login{
     public $connection;
@@ -17,7 +18,9 @@ class Login{
         $row = mysqli_fetch_assoc($content);
 
         if($row['username'] == $this->username && $row['password'] == $this->password){
-            echo "Welcome $this->username!";
+            //echo "Welcome $this->username!";
+            $_SESSION["logged-in"] = true;
+            header('Location: ../php/logged-in.php');
         }
         else{
             echo "username or password is incorrect!";
